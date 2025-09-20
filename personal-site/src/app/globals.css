@@ -2,24 +2,66 @@
 
 @layer base {
   :root {
-    /* Brand / Identity */
-    --color-primary: #fca311; /* Accent: Buttons, highlights, CTAs */
-    --color-secondary: #14213d; /* Dark blue: Nav, headers, section backgrounds */
-    --color-dark: #000000; /* Footer, strongest text */
-    --color-light: #e5e5e5; /* Neutral background blocks, subtle dividers */
-    --color-bg: #ffffff; /* Main site background */
-    --color-text: #000000; /* Default text color */
+    /* Colors */
+    --color-primary: #fca311;
+    --color-bg-start: #14213d;
+    --color-bg-end: #0a0a0a;
+    --color-neutral-text: #e5e5e5;
 
-    /* Text on dark surfaces */
-    --color-text-inverse: #ffffff;
+    /* Border radius & shadows */
+    --radius-xl: 1rem;
+    --shadow-glow-sm: 0 8px 30px rgba(252, 163, 17, 0.12);
+    --shadow-ring: 0 0 0 6px rgba(252, 163, 17, 0.06),
+      0 6px 30px rgba(0, 0, 0, 0.6);
 
-    /* Utility colors */
-    --color-border: #e5e5e5;
-    --color-link: #fca311;
-    --color-link-hover: #e49400;
+    /* Gradients */
+    --gradient-hero: linear-gradient(
+      135deg,
+      var(--color-bg-start) 0%,
+      var(--color-bg-end) 80%
+    );
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------
+   Backgrounds
+--------------------------- */
+.bg-hero {
+  background: var(--gradient-hero);
+}
+
+/* ---------------------------
+   Decorations
+--------------------------- */
+.decoration-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--color-primary);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+/* ---------------------------
+   Shadows & rings
+--------------------------- */
+.shadow-ring {
+  box-shadow: var(--shadow-ring);
+}
+
+/* ---------------------------
+   Animations
+--------------------------- */
 @keyframes pulse-slow {
   0%,
   100% {
@@ -36,6 +78,17 @@
   animation: pulse-slow 3s ease-in-out infinite;
 }
 
-html {
-  scroll-behavior: smooth;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease forwards;
 }
