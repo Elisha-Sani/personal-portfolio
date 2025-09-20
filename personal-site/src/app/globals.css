@@ -2,13 +2,38 @@
 
 @layer base {
   :root {
-    --deep-purple: #4a2c6a; /* Main background and header/footer color */
-    --teal-green: #26a69a; /* Button and link color */
-    --vibrant-orange: #ff7043; /* Hover and CTA color */
-    --light-gray: #e0e0e0; /* Card background color */
-    --off-white: #f5f5f5; /* Primary text color */
-    --soft-purple: #8e6aa9; /* Highlight or data viz color */
+    /* Brand / Identity */
+    --color-primary: #fca311; /* Accent: Buttons, highlights, CTAs */
+    --color-secondary: #14213d; /* Dark blue: Nav, headers, section backgrounds */
+    --color-dark: #000000; /* Footer, strongest text */
+    --color-light: #e5e5e5; /* Neutral background blocks, subtle dividers */
+    --color-bg: #ffffff; /* Main site background */
+    --color-text: #000000; /* Default text color */
+
+    /* Text on dark surfaces */
+    --color-text-inverse: #ffffff;
+
+    /* Utility colors */
+    --color-border: #e5e5e5;
+    --color-link: #fca311;
+    --color-link-hover: #e49400;
   }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
 }
 
 html {
