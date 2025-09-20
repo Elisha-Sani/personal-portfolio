@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --deep-purple: #4a2c6a; /* Main background and header/footer color */
+    --teal-green: #26a69a; /* Button and link color */
+    --vibrant-orange: #ff7043; /* Hover and CTA color */
+    --light-gray: #e0e0e0; /* Card background color */
+    --off-white: #f5f5f5; /* Primary text color */
+    --soft-purple: #8e6aa9; /* Highlight or data viz color */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
