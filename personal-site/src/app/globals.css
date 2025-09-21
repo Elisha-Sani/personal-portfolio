@@ -10,6 +10,8 @@
     --color-bg-start: #14213d;
     --color-bg-end: #0a0a0a;
     --color-neutral-text: #e5e5e5;
+    --color-bg-about: #18191b;
+    --color-bg-abcard: #161b22;
 
     /* Border radius & shadows */
     --radius-xl: 1rem;

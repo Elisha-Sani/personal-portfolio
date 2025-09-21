@@ -60,9 +60,7 @@ const Navbar: React.FC = () => {
               key={item.id}
               href={`#${item.id}`}
               className={`cursor-pointer transition-colors hover:text-[var(--color-primary)] text-xl ${
-                active === item.id
-                  ? "text-[var(--color-link-hover)]"
-                  : "text-[var(--color-text-inverse)]"
+                active === item.id ? "text-[var(--color-primary)]" : ""
               }`}
             >
               {item.label}

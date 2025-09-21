@@ -35,9 +35,9 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex items-center justify-center md:justify-end relative">
-        <div className="w-64 h-64 md:w-72 md:h-72 rounded-full shadow-ring overflow-hidden border border-amber-700/20 p-1">
+        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-ring overflow-hidden border border-amber-700/20 p-1">
           <Image
-            src="/images/photo1.jpg"
+            src="/images/elisha.jpg"
             alt="Elisha Sani"
             width={600}
             height={600}
