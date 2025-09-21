@@ -12,6 +12,8 @@ const navItems: NavItem[] = [
   { id: "hero", label: "Home" },
   { id: "about", label: "About" },
   { id: "portfolio", label: "Portfolio" },
+  { id: "services", label: "Services" },
+  { id: "contact", label: "Contact" },
 ];
 const Navbar: React.FC = () => {
   const [active, setActive] = useState<string>("hero");
@@ -44,21 +46,20 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full shadow-md backdrop-blur-lg bg-[var(--color-dark)]">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center font-extrabold text-2xl text-white"
-        >
-          ElishaSani
-        </Link>
+    <header className="fixed top-0 left-0 z-30 w-full bg-black border-b border-black/30 backdrop-blur-md bg-">
+      <nav className="max-w-8xl mx-auto flex justify-between items-center px-6 md:px-10 lg:px-16 py-6">
+        <div className="flex items-center gap-4">
+          {/* Logo */}
+          <Link href="/" className="text-white font-bold text-2xl">
+            <span className="text-[var(--color-primary)]">Elisha</span>Sani
+          </Link>
+        </div>
         <div className="flex items-center gap-6">
           {navItems.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`cursor-pointer transition-colors hover:text-[var(--color-link)] text-xl ${
+              className={`cursor-pointer transition-colors hover:text-[var(--color-primary)] text-xl ${
                 active === item.id
                   ? "text-[var(--color-link-hover)]"
                   : "text-[var(--color-text-inverse)]"
@@ -68,16 +69,8 @@ const Navbar: React.FC = () => {
             </a>
           ))}
         </div>
-        <div className="flex items-center">
-          <Link
-            href=""
-            className="px-3 py-2 bg-[var(--color-primary)] text-[var(--color-text-inverse)] rounded-md"
-          >
-            Message Me
-          </Link>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
