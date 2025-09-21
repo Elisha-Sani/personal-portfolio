@@ -22,8 +22,8 @@ const IconCard: React.FC<IconCardProps> = ({ icon, value, text }) => {
   return (
     <div
       className="flex flex-col items-start space-y-16 bg-[var(--color-bg-abcard)]
-                    border border-[var(--color-bg-start)] hover:border-[var(--color-primary)]/20 rounded-3xl 
-                    p-10 shadow-md hover:shadow-lg transition-shadow duration-300"
+                    border border-[var(--color-bg-start)] rounded-3xl 
+                    p-10 cursor-pointer hover:border-[var(--color-primary)]/20 shadow-md hover:shadow-lg  transition-shadow duration-300"
     >
       {/* Icon box */}
       <div className="p-3 rounded-md bg-[var(--color-primary)]/30">
@@ -46,7 +46,7 @@ const IconCard: React.FC<IconCardProps> = ({ icon, value, text }) => {
 
 const myskills: MySkill[] = [
   { id: "python", label: "Python" },
-  { id: "next", label: "Next.js" },
+  { id: "react", label: "React" },
   { id: "postgress", label: "Postgress" },
   { id: "prisma", label: "Prisma" },
   { id: "git", label: "Git" },
