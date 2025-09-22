@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`cursor-pointer transition-colors hover:text-[var(--color-primary)] text-xl ${
+              className={`cursor-pointer transition-colors hover:text-[var(--color-primary)] text-base md:text-lg font-semibold ${
                 active === item.id ? "text-[var(--color-primary)]" : ""
               }`}
             >
