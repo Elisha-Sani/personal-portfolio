@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="max-w-8xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-screen px-8 md:px-16 relative"
+      className="max-w-8xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-screen px-8 md:px-16 py-24 relative"
     >
       {/* Left Column */}
       <div className="fade-up space-y-6">
@@ -26,16 +26,16 @@ const Hero = () => {
           machine learning, cloud architecture, and modern web technologies.
         </p>
         <div className="flex items-center gap-4 mt-8 pt-6">
-          <Button className="bg-[var(--color-primary)] text-base md:text-lg rounded-2xl text-black font-bold py-9 px-6 shadow-[var(--shadow-glow-sm)] transition-transform duration-300 hover:scale-105 hover:bg-[var(--color-primary)] hover:text-xl hover:text-black">
+          <Button className="bg-[var(--color-primary)] text-base md:text-lg rounded-2xl text-black font-bold py-6 px-3 md:py-8 md:px-5 shadow-[var(--shadow-glow-sm)] transition-transform duration-300 hover:scale-y-105 hover:bg-[var(--color-primary)] hover:text-xl hover:text-black">
             View My Work
           </Button>
-          <Button className="bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] text-base md:text-lg rounded-2xl font-bold py-9 px-6 hover:bg-[var(--color-primary)] hover:text-black transition-colors duration-300 ease-in-out">
+          <Button className="bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] text-base md:text-lg rounded-2xl font-bold py-6 px-3 md:py-8 md:px-5 hover:bg-[var(--color-primary)] hover:text-black transition-colors duration-300 ease-in-out">
             Contact Me
           </Button>
         </div>
       </div>
       <div className="flex items-center justify-center md:justify-end relative">
-        <div className="w-64 h-64 md:w-72 md:h-72 rounded-full shadow-ring overflow-hidden border border-amber-700/20 p-1">
+        <div className="w-54 h-54 md:w-64 md:h-64 rounded-full shadow-ring overflow-hidden border border-amber-700/20 p-1">
           <Image
             src="/images/elisha.jpg"
             alt="Elisha Sani"

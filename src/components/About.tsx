@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
+import VideoPlayer from "./VideoPlayer";
 
 type MySkill = {
   id: string;
@@ -21,22 +22,22 @@ interface IconCardProps {
 const IconCard: React.FC<IconCardProps> = ({ icon, value, text }) => {
   return (
     <div
-      className="flex flex-col items-start space-y-16 bg-[var(--color-bg-abcard)]
+      className="flex flex-col items-start space-y-8 md:space-y-12 bg-[var(--color-bg-abcard)]
                     border border-[var(--color-bg-start)] rounded-3xl 
-                    p-5 cursor-pointer hover:border-[var(--color-primary)]/20 shadow-md hover:shadow-lg  transition-shadow duration-300"
+                    p-4 md:p-5 cursor-pointer hover:border-[var(--color-primary)]/20 shadow-md hover:shadow-lg  transition-shadow duration-300"
     >
       {/* Icon box */}
       <div className="p-3 rounded-md bg-[var(--color-primary)]/30">
         <FontAwesomeIcon
           icon={icon}
-          className="text-[var(--color-primary)] w-6 h-6"
+          className="text-[var(--color-primary)] w-4 h-4 md:w-6 md:h-6"
         />
       </div>
 
       {/* Text content */}
       <div className="space-y-3">
         <p className="text-base lg:text-xl font-semibold text-white">{value}</p>
-        <p className="text-base lg:text-lg leading-relaxed tracking-wide text-muted-foreground">
+        <p className="text-sm lg:text-lg leading-relaxed tracking-wide text-muted-foreground">
           {text}
         </p>
       </div>
@@ -62,7 +63,7 @@ const About = () => {
         <h1 className="text-xl md:text-4xl lg:text-5xl text-white font-semibold">
           About Me
         </h1>
-        <hr className="w-28 mx-auto my-6 h-[3px] bg-[var(--color-primary)] border-0 rounded-full" />
+        <hr className="w-18 md:w-22 lg:w-28 mx-auto my-6 h-[3px] bg-[var(--color-primary)] border-0 rounded-full" />
       </div>
       <div className="px-6 md:px-12 lg:px-24 grid md:grid-cols-2 gap-24 mt-10 md:mt-16">
         <div className="fade-up space-y-6">
@@ -95,7 +96,7 @@ const About = () => {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
           <IconCard
             icon={faCode}
             value="2+ Years"
@@ -109,6 +110,9 @@ const About = () => {
           <IconCard icon={faGraduationCap} value="DSC" text="Making progress" />
           <IconCard icon={faUsers} value="2" text="Happy clients" />
         </div>
+      </div>
+      <div className="mt-18">
+        <VideoPlayer />
       </div>
     </section>
   );

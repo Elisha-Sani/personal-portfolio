@@ -47,19 +47,20 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 z-30 w-full bg-black border-b border-black/30 backdrop-blur-md bg-">
-      <nav className="max-w-8xl mx-auto flex justify-between items-center px-6 md:px-10 lg:px-16 py-6">
+      <nav className="max-w-8xl mx-auto flex justify-between items-center px-6 md:px-10 lg:px-16 py-4">
         <div className="flex items-center gap-4">
           {/* Logo */}
-          <Link href="/" className="text-white font-bold text-2xl">
-            <span className="text-[var(--color-primary)]">Elisha</span>Sani
+          <Link href="/" className="text-white font-bold text-2xl md:text-4xl">
+            <span className="text-[var(--color-primary)]">E</span>
+            <span className="text-gray-300 text-xl">.</span>S
           </Link>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-2 md:gap-6">
           {navItems.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`cursor-pointer transition-colors hover:text-[var(--color-primary)] text-base md:text-lg font-semibold ${
+              className={`cursor-pointer transition-colors hover:text-[var(--color-primary)] text-sm md:text-lg font-semibold ${
                 active === item.id ? "text-[var(--color-primary)]" : ""
               }`}
             >
