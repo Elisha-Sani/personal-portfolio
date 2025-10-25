@@ -1,20 +1,15 @@
-import {
-  faCode,
-  faGraduationCap,
-  faProjectDiagram,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
+// icons referenced by name/prefix arrays to avoid cross-package type issues
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
-import VideoPlayer from "./VideoPlayer";
+import Skills from "./Skills";
+// import VideoPlayer from "./VideoPlayer";
 
 type MySkill = {
   id: string;
   label: string;
 };
 interface IconCardProps {
-  icon: IconProp;
+  icon: React.ComponentProps<typeof FontAwesomeIcon>["icon"];
   value: string;
   text: string;
 }
@@ -98,21 +93,25 @@ const About = () => {
         </div>
         <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
           <IconCard
-            icon={faCode}
+            icon={["fas", "code"]}
             value="2+ Years"
             text="Development experience"
           />
           <IconCard
-            icon={faProjectDiagram}
+            icon={["fas", "project-diagram"]}
             value="3+"
             text="Projects completed"
           />
-          <IconCard icon={faGraduationCap} value="DSC" text="Making progress" />
-          <IconCard icon={faUsers} value="2" text="Happy clients" />
+          <IconCard
+            icon={["fas", "graduation-cap"]}
+            value="DSC"
+            text="Making progress"
+          />
+          <IconCard icon={["fas", "users"]} value="2" text="Happy clients" />
         </div>
       </div>
-      <div className="mt-18">
-        <VideoPlayer />
+      <div className="max-w-8xl mx-auto bg-[var(--color-bg-end)] px-6 py-20">
+        <Skills />
       </div>
     </section>
   );

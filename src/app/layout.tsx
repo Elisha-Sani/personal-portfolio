@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+// Ensure FontAwesome icons are registered before any components render
+import "../lib/fontawesome";
 
 export const metadata: Metadata = {
   title: "Elisha Sani — Developer & Data Scientist",
