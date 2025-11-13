@@ -110,9 +110,6 @@ const About = () => {
           <IconCard icon={["fas", "users"]} value="2" text="Happy clients" />
         </div>
       </div>
-      <div className="max-w-8xl mx-auto bg-[var(--color-bg-end)] px-6 py-20">
-        <Skills />
-      </div>
     </section>
   );
 };

@@ -47,7 +47,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
 
 const Skills = () => {
   return (
-    <section>
+    <section className="max-w-8xl mx-auto bg-[var(--color-bg-end)] px-6 py-20">
       <div className="max-w-2xl mx-auto items-center justify-center text-center">
         <h1 className="text-xl md:text-4xl lg:text-5xl text-white font-bold ">
           Skills & Technologies
