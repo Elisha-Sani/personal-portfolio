@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+// @ts-expect-error: allow importing global CSS with no type declarations
 import "./global.css";
 // Ensure FontAwesome icons are registered before any components render
 import "../lib/fontawesome";
