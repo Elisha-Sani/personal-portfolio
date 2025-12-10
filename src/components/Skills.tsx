@@ -47,7 +47,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
 
 const Skills = () => {
   return (
-    <section className="max-w-8xl mx-auto bg-[var(--color-bg-end)] px-6 py-15 md:py-20">
+    <section className="max-w-8xl mx-auto bg-[var(--color-bg-end)] px-2 md:px-6 py-15 md:py-20">
       <div className="max-w-2xl mx-auto items-center justify-center text-center">
         <h1 className="text-xl md:text-4xl lg:text-5xl text-white font-bold ">
           Skills & Technologies
@@ -57,7 +57,7 @@ const Skills = () => {
           complex data challenges
         </p>
       </div>
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 justify-center mt-6 md:mt-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 justify-center mt-6 md:mt-12">
         <SkillCard
           icon={["fab", "react"]}
           title="Frontend"

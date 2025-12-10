@@ -22,15 +22,15 @@ const FilterContent: React.FC<FilterProps> = ({ label, isActive, onClick }) => {
 };
 
 const allProjects = [
-  { id: 1, title: "E-commerce Site", category: "web" },
-  { id: 2, title: "Weather App", category: "mobile" },
-  { id: 3, title: "Design System", category: "desktop" },
-  { id: 4, title: "Portfolio Website", category: "web" },
-  { id: 5, title: "Task Manager", category: "desktop" },
-  { id: 6, title: "Social Media App", category: "mobile" },
-  { id: 7, title: "Blog Platform", category: "web" },
-  { id: 8, title: "Music Player", category: "mobile" },
-  { id: 9, title: "File Explorer", category: "desktop" },
+  { id: 1, title: "E-commerce Site", image: "", category: "web" },
+  { id: 2, title: "Weather App", image: "", category: "mobile" },
+  { id: 3, title: "Design System", image: "", category: "desktop" },
+  { id: 4, title: "Portfolio Website", image: "", category: "web" },
+  { id: 5, title: "Task Manager", image: "", category: "desktop" },
+  { id: 6, title: "Social Media App", image: "", category: "mobile" },
+  { id: 7, title: "Blog Platform", image: "", category: "web" },
+  { id: 8, title: "Music Player", image: "", category: "mobile" },
+  { id: 9, title: "File Explorer", image: "", category: "desktop" },
 ];
 
 const filters = ["all", "web", "desktop", "mobile"];
@@ -80,7 +80,10 @@ export default function Portfolio() {
           ))}
         </div>
         <div className="mt-6 md:mt-12 text-center">
-          <button className="px-6 py-4 bg-[var(--color-primary)] rounded-lg text-black font-semibold transition-transform duration-300 hover:scale-105 hover:bg-[var(--color-primary)]/80 hover:cursor-pointer">
+          <button
+            className="px-6 py-4 bg-[var(--color-primary)] rounded-lg text-black font-semibold transition-transform duration-300 hover:scale-105 hover:bg-[var(--color-primary)]/80 hover:cursor-pointer"
+            onClick={() => setActiveFilter("all")}
+          >
             View All Projects
           </button>
         </div>
